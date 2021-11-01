@@ -33,9 +33,26 @@
 
 #### 安装教程
 
+## 
+### sudo rm /usr/bin/python3
+### sudo ln -s /usr/bin/python3.7 /usr/bin/python3
+### python3 -m pip install --upgrade pip
+### sudo apt update
+### sudo apt -y install python3.7-dev -Y
+### git clone https://https://github.com/yu3peng/NewsRecommends
+
 1.  安装Python依赖
 
 ```
+https://www.katacoda.com/courses/ubuntu/playground
+sudo rm /usr/bin/python3
+sudo ln -s /usr/bin/python3.7 /usr/bin/python3
+python3 -m pip install --upgrade pip
+sudo apt update
+sudo apt -y install python3.7-dev -Y
+git clone https://github.com/yu3peng/NewsRecommends.git
+cd NewsRecommends/FinalProject
+pip install setuptools
 pip install -r requirements.txt
 #（requirements.txt文件已经包含在源码根目录下）
 ```
