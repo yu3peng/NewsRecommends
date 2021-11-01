@@ -33,14 +33,6 @@
 
 #### 安装教程
 
-## 
-### sudo rm /usr/bin/python3
-### sudo ln -s /usr/bin/python3.7 /usr/bin/python3
-### python3 -m pip install --upgrade pip
-### sudo apt update
-### sudo apt -y install python3.7-dev -Y
-### git clone https://https://github.com/yu3peng/NewsRecommends
-
 1.  安装Python依赖
 
 ```
@@ -60,11 +52,24 @@ pip install -r requirements.txt
 2.  安装Vue.js依赖
 
 ```
+cd ../News-Page
 npm install
 ```
 前端页面里用户端和管理端是分开的两个项目，所以需要再两个项目下都进行依赖安装！
 
 3.  数据库创建/数据导入
+```
+sudo apt -y install mysql-server mysql-client
+sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+注释掉bind-address= localhost
+sudo apt -y install libmysqlclient-dev
+sudo service mysql restart
+pip install mysqlclient
+
+cd ../FinalProject
+mysql -uroot -proot < news.sql
+```
+
 SQL文件已经放在了Django项目根目录下，自行Navicat或其他方式导入即可
 
 4.  数据库配置
